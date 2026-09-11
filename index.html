@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maricopa County — Digital Design System</title>
+<style>
+:root{
+  --summer-night-blue:#132048;--sunrise-orange:#F26724;--sky-blue:#0070B9;--link:#00568C;
+  --desert-turquoise:#1E988A;--sunshine-yellow:#FAA21B;--night-black:#131D28;--ink:#131D28;
+  --base-lightest:#F3F4F4;--base-lighter:#EAEDED;--base-light:#D8DFE1;--base:#AAA8AE;
+  --base-dark:#6D6D75;--base-darker:#3E414A;--radius:8px;--shell:1040px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap');
+*{box-sizing:border-box;}
+body{margin:0;font-family:'Roboto',system-ui,sans-serif;color:var(--ink);background:var(--base-lightest);line-height:1.6;}
+h1,h2,h3{font-family:'Poppins',sans-serif;letter-spacing:-.01em;margin:0;}
+a{color:var(--link);}
+:where(a,button):focus-visible{outline:2px solid transparent;outline-offset:2px;box-shadow:0 0 0 2px var(--sunshine-yellow),0 0 0 5px var(--summer-night-blue);border-radius:3px;}
+
+.masthead{background:var(--summer-night-blue);color:#fff;padding:56px 0 48px;}
+.in{max-width:var(--shell);margin:0 auto;padding:0 24px;}
+.eyebrow{font-family:'Roboto';font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#F9AD84;margin:0 0 12px;}
+.masthead h1{font-weight:800;font-size:clamp(30px,5.5vw,46px);line-height:1.05;}
+.masthead p{margin:14px 0 0;max-width:64ch;color:#C9CBE0;font-size:18px;}
+
+main{max-width:var(--shell);margin:0 auto;padding:44px 24px 40px;}
+h2.sec{font-size:22px;font-weight:800;color:var(--summer-night-blue);margin:8px 0 20px;padding-top:20px;border-top:3px solid var(--sunrise-orange);display:inline-block;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px;}
+.card{background:#fff;border:1px solid var(--base-light);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--ink);transition:border-color .12s,transform .12s;}
+.card:hover{border-color:var(--summer-night-blue);transform:translateY(-2px);}
+.card .strip{height:6px;background:var(--sunrise-orange);}
+.card .body{padding:22px 24px;flex:1;}
+.card h3{font-family:'Poppins';font-weight:800;font-size:20px;color:var(--summer-night-blue);margin:0 0 8px;}
+.card p{margin:0;font-size:15px;color:var(--base-darker);}
+.card .go{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-family:'Poppins';font-weight:700;font-size:14px;color:var(--link);}
+.card .go svg{width:15px;height:15px;}
+.tag{display:inline-block;font-family:'Roboto';font-weight:700;font-size:11px;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border-radius:100px;background:var(--base-lighter);color:var(--base-darkest);border:1px solid var(--base-light);margin-top:14px;}
+
+footer{background:var(--summer-night-blue);color:#C9CBE0;margin-top:32px;}
+footer .in{padding:24px;font-size:13px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="in">
+    <p class="eyebrow">Office of Communications · Web &amp; Creative Strategy</p>
+    <h1>Maricopa County Digital Design System</h1>
+    <p>A working library of accessible, brand-aligned components and prototypes built on USWDS — components, an example page, a resident-portal prototype, an avatar set, and the specifications behind them.</p>
+  </div>
+</header>
+
+<main>
+  <h2 class="sec">Explore</h2>
+  <div class="grid">
+
+    <a class="card" href="maricopa-components.html">
+      <span class="strip"></span>
+      <div class="body">
+        <h3>Component Library</h3>
+        <p>Buttons, links, alerts, forms, cards, tags, focus states, tabs, accordion, in-page navigation, anchor links, process list, step indicator, modal, carousel, and the universal header &amp; footer — each with its contrast rationale.</p>
+        <span class="go">Open library <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+
+    <a class="card" href="maricopa-example-page.html">
+      <span class="strip"></span>
+      <div class="body">
+        <h3>Example Page</h3>
+        <p>A full county service page showing the type hierarchy — headers, subheaders, body copy, lists, callout, and an accessible table — in a real layout, with a type-scale reference.</p>
+        <span class="go">Open page <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+
+    <a class="card" href="maricopa-avatars.html">
+      <span class="strip"></span>
+      <div class="body">
+        <h3>Avatar Library</h3>
+        <p>Eleven Sonoran Desert profile avatars — tortoise, hare, eagle, dog, wolf, roadrunner, rattlesnake, scorpion, hawk, hummingbird, quail — keyboard-selectable and screen-reader labeled.</p>
+        <span class="go">Open avatars <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+
+    <a class="card" href="login.html">
+      <span class="strip"></span>
+      <div class="body">
+        <h3>Resident Portal (prototype)</h3>
+        <p>A signed-in account experience: overview dashboard, My Services, Explore Programs &amp; Services, Support, and an editable Profile. Starts at the sign-in screen.</p>
+        <span class="go">Open portal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+
+    <a class="card" href="maricopa-uswds-token-spec.md">
+      <span class="strip"></span>
+      <div class="body">
+        <h3>Token Specification</h3>
+        <p>Color and type tokens, component scope, editorial guardrails, and per-component accessibility acceptance criteria for the vendor build.</p>
+        <span class="tag">Markdown</span>
+      </div>
+    </a>
+
+    <a class="card" href="maricopa-typography-spec.md">
+      <span class="strip"></span>
+      <div class="body">
+        <h3>Typography Specification</h3>
+        <p>Enforceable font-pairing rules — the Poppins/Roboto role split, the 16px floor, two type scales, tracking values, and metric-adjusted fallbacks.</p>
+        <span class="tag">Markdown</span>
+      </div>
+    </a>
+
+  </div>
+</main>
+
+<footer>
+  <div class="in">
+    <span>© 2026 Maricopa County · Office of Communications</span>
+    <span>Built on the U.S. Web Design System · Prototype</span>
+  </div>
+</footer>
+
+</body>
+</html>
